@@ -7,17 +7,25 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200 background">
     <div class="py-10">
-        <p class="sm:text-3xl text-2xl text-center china text-red-500">
+        <p class="lg:text-4xl text-3xl text-center china text-red-500">
             Chinese Remainder Theorem
         </p>
     </div>
 
-    <div class="latex text-center">
+    <div class="latex text-center text-2xl sm:text-3xl leading-loose">
         Enter the data: <br>
         <div class="latexItalic">
-            𝑥≡ <input type="number" class="latex w-10"> (mod <input type="number" class="latex w-10">)
+            <form action="">
+                𝑥≡ <input type="number" class="latex w-10 text-center" placeholder="a&#8321"> (mod <input type="number" class="latex w-10 text-center" placeholder="m&#8321">)
+                <br> <br>
+                𝑥≡ <input type="number" class="latex w-10 text-center" placeholder="a&#8322"> (mod <input type="number" class="latex w-10 text-center" placeholder="m&#8322">)
+                <br><br>
+                <input type="submit" value="Add More" class="latex font-bold text-xl rounded-sm bg-blue-300 text-red-500 p-3">
+                <br><br>
+                <input type="submit" value="Submit" class="latex font-bold text-xl rounded-sm bg-blue-300 text-red-500 p-3">
+            </form>
         </div>
     </div>
 </body>
