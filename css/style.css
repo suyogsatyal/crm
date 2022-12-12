@@ -468,12 +468,43 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.w-3 {
+  width: 0.75rem;
+}
+.w-8 {
+  width: 2rem;
+}
+.w-10 {
+  width: 2.5rem;
+}
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .text-center {
   text-align: center;
 }
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+@media (min-width: 640px) {
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 
@@ -484,4 +515,22 @@ video {
 
 .china{
     font-family: china;
+}
+
+@font-face {
+    font-family: latexItalic;
+    src: url(../font/latexItalic.ttf);
+}
+
+.latexItalic{
+    font-family: latexItalic;
+}
+
+@font-face {
+    font-family: latex;
+    src: url(../font/latex.ttf);
+}
+
+.latex{
+    font-family: latex;
 }
