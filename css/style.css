@@ -479,5 +479,9 @@ video {
 
 @font-face {
     font-family: china;
-    src: url(../font/china.ttf);
+    src: url(../font/go3v2.ttf);
+}
+
+.china{
+    font-family: china;
 }
