@@ -471,6 +471,9 @@ video {
 .w-10 {
   width: 2.5rem;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .rounded-sm {
   border-radius: 0.125rem;
 }
