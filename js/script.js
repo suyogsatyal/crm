@@ -1,3 +1,14 @@
+let initialNum = 3;
+
+function addMore(){
+    initialNum += 1;
+    let input = document.getElementById('numberInput');
+    let more = document.createElement('div');
+    more.innerHTML = `𝑥≡ <input type="number" class="latex w-10 text-center" id="a2" placeholder="a&#8345"> (mod <input type="number" class="latex w-10 text-center" id="m2" placeholder="m&#8345">)<br><br>`;
+
+    input.appendChild(more);
+}
+
 function submit(){
     var hcf = 1;
     globalThis,a = [3];
@@ -20,10 +31,10 @@ function submit(){
         }
     }
 
-    if(hcf == 1){
-        alert("The numbers are relatively-prime");
+    if(hcf != 1){
+        document.getElementById('warning').innerHTML = "The numbers are not relatively-prime";
     }
     else{
-        alert("The numbers are not relatively-prime");
+        document.getElementById('warning').innerHTML = "";
     }
 }
