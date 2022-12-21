@@ -38,3 +38,35 @@ function submit(){
         document.getElementById('warning').innerHTML = "";
     }
 }
+
+
+
+
+
+
+/***
+Working code but not implemented yet
+
+let a = [4];
+
+m = [0, 2, 3, 5];
+
+hcf = 1;
+
+for(count = 1; count<=m.length - 1; count++){
+    
+    for(factor = 2; ((factor<m[count])||(factor<m[count+1])); factor++){
+        if((m[count]%factor==0)&&(m[count+1]%factor==0)){
+            hcf = factor;
+        }
+    }
+    
+    if(hcf!=1){
+        console.log("Not");
+        break;
+    }
+}
+
+console.log("Relatively Prime")
+
+***/
