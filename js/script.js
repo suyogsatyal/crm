@@ -1,36 +1,56 @@
 let initialNum = 3;
 
 function addMore(){
-    initialNum += 1;
+    
     let input = document.getElementById('numberInput');
     let more = document.createElement('div');
-    more.innerHTML = `𝑥≡ <input type="number" class="latex w-10 text-center" id="a2" placeholder="a&#8345"> (mod <input type="number" class="latex w-10 text-center" id="m2" placeholder="m&#8345">)<br><br>`;
-
+    more.innerHTML = `𝑥≡ <input type="number" class="a" id="a`+initialNum+`" placeholder="a&#832`+initialNum+`"> (mod <input type="number" class="m" id="m`+initialNum+`" placeholder="m&#832`+initialNum+`">)<br><br>`;
+    initialNum += 1;
     input.appendChild(more);
 }
 
 function submit(){
     var hcf = 1;
-    globalThis,a = [3];
+    globalThis,a = [initialNum];
     a[0] = 0;
-    globalThis,m = [3];
-    m[0] = 0;
-    a[1] =  document.getElementById("a1").value;
-    // console.log(a[1]);
-    a[2] =  document.getElementById("a2").value;
-    // console.log(a[2]);
+    globalThis,m = [initialNum];
+    m[0] = 1;
+    
+    // a[1] =  document.getElementById("a1").value;
+    // // console.log(a[1]);
+    // a[2] =  document.getElementById("a2").value;
+    // // console.log(a[2]);
 
-    m[1] =  document.getElementById("m1").value;
+    // m[1] =  document.getElementById("m1").value;
     // console.log(m[1]);
-    m[2] =  document.getElementById("m2").value;
+    // m[2] =  document.getElementById("m2").value;
     // console.log(m[2]);
+    // console.log(m)
+    for(i = 1; i< initialNum; i++){
+        aArray = "a"+i;
+        mArray = "m"+i;
+        a[i] =  document.getElementById(aArray).value;
+        m[i] =  document.getElementById(mArray).value;
+        console.log(a);
+    }
+    console.log(a);
 
-    for (let i = 1; ((i<m[1])||(i<m[2])); i++) {
-        if(( m[1]%i == 0 )&&( m[2]%i ==0 )){
-            hcf = i;
+    
+
+    for(count = 1; count<=m.length - 1; count++){
+    
+        for(factor = 2; ((factor<m[count])||(factor<m[count+1])); factor++){
+            if((m[count]%factor==0)&&(m[count+1]%factor==0)){
+                hcf = factor;
+            }
+        }
+        
+        if(hcf!=1){
+            console.log("Not");
+            break;
         }
     }
-
+    
     if(hcf != 1){
         document.getElementById('warning').innerHTML = "The numbers are not relatively-prime";
     }
@@ -38,35 +58,3 @@ function submit(){
         document.getElementById('warning').innerHTML = "";
     }
 }
-
-
-
-
-
-
-/***
-Working code but not implemented yet
-
-let a = [4];
-
-m = [0, 2, 3, 5];
-
-hcf = 1;
-
-for(count = 1; count<=m.length - 1; count++){
-    
-    for(factor = 2; ((factor<m[count])||(factor<m[count+1])); factor++){
-        if((m[count]%factor==0)&&(m[count+1]%factor==0)){
-            hcf = factor;
-        }
-    }
-    
-    if(hcf!=1){
-        console.log("Not");
-        break;
-    }
-}
-
-console.log("Relatively Prime")
-
-***/

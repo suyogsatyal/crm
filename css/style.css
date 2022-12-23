@@ -468,9 +468,6 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.w-10 {
-  width: 2.5rem;
-}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -568,6 +565,18 @@ body{
 
 .latex{
     font-family: latex;
+}
+
+.m{
+    font-family: latex;
+    width: 2.5rem;
+    text-align: center;
+}
+
+.a{
+    font-family: latex;
+    width: 2.5rem;
+    text-align: center;
 }
 
 input::-webkit-outer-spin-button,
